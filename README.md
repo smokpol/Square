@@ -5,6 +5,7 @@ Its goal is to be somewhat simple yet very customizable, allowing for disabling,
 
 To ensure its modifiability it is a group of DLL files.
 
+It is currently on very early development state.
 # Authors
 It is **Not** developed or in any other way related to Square Open Source company,
 it is developed by me Smokpol (for now because any pull requests would be apreciated), 
@@ -25,4 +26,9 @@ If you searching for easy to use graphic library go check https://www.sfml-dev.o
 # Why DLLs instead of something else?
 Dlls allow for increadible customizability while being almost as quick as static libraries. Except when they are intilizated than they are **painfully** slow. 
 
-But I do not care that much about intialization time, and static libraries lack abillity to customize something on runtime without checking some sort of resource every time function is called or it uses virtual functions which works much better than DLLs but than they're not as modular (at least I think so) but due to slight performance loss for DLLs Tesseract, to allow customizabillity in terms of diffrent and weird boot options it will be able to use JIT compillation somewhat easly. (JIT compillation is compilling parts of the code at runtime) 
+But I do not care that much about intialization time, and static libraries lack abillity to customize something on runtime without checking some sort of resource every time function is called or it uses virtual functions which works much better than DLLs but than they're not as modular (at least I think so) but due to slight performance loss for DLLs Tesseract, to allow customizabillity in terms of diffrent and weird boot options it will be able to use JIT compillation somewhat easly. (JIT compillation is compilling parts of the code at runtime)
+
+# What Platform is it intended for?
+
+For linux and windows, due to its modular design, compilling for the other platform 
+inclueds just switching from one version of the library to the other one, and since I use both, linux and windows, both versions will be developed at the same rate. One thing left to mention is that its runtime customizability allows for support for wayland and x protocol in one app.
